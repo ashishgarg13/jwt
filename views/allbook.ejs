@@ -1,0 +1,15 @@
+<h1><%= author.name %></h1>
+<ul>
+  <li>Age: <%= author.age%></li>
+  <li>DOb: <%= author.dob %></li>
+</ul>
+<h2>Books</h2>
+<ul>
+  <% for(let product of author.books) {%>
+  <li><a href="/products/<%=product._id%>"><%=product.name%></a></li>
+  <form action="/products/<%=product._id%>?_method=DELETE" method="POST">
+    <button>Delete</button>
+  </form>
+  <% } %>
+</ul>
+<a href="/author/<%=author._id%>/createbook">Add Book</a>

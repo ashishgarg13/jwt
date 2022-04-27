@@ -1,0 +1,7 @@
+<h1>All Author</h1>
+<ul>
+  <% for(let author of authors) { %>
+  <li><a href="/author/<%=author._id%>"><%= author.name %></a></li>
+  <% }%>
+</ul>
+<a href="/createauthor">Add Author</a>
